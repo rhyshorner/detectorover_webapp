@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'detectorover_db',
         'USER': 'rhyshorner',
-        # write in terminal `export DB_PASSWORD=password` before runserver
+        # write in terminal `export DB_PASSWORD=password` before runserver (ubuntu)
         'PASSWORD': os.environ['DB_PASSWORD'],
         'HOST': 'localhost',
         'PORT': '5432',

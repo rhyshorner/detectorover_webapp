@@ -28,8 +28,12 @@ for x in range(30):
     print("name done.")
     description = rw.generate()
     print("description done.")
-    manufacturer = rw.generate()
-    print("manufacturer done.")
+    if x % 5 == 0:
+        manufacturer = "InvenSense"
+        print("manufacturer done.")
+    else:
+        manufacturer = rw.generate()
+        print("manufacturer done.")
     manufacturer_part_number = rw.generate()
     print("manufacturer_part_number done.")
     supplier = rw.generate()

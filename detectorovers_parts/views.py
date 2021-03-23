@@ -13,16 +13,18 @@ def parts_and_sensor_list(request):
     }
     return render(request, 'parts_and_sensor_list.html', context)
 
-# need to fix this
-def part_supplier(request, category):
-    posts = Post.objects.filter(
-        categories__name__contains=category
-    ).order_by(
-        '-created_on'
-    )
-    context = {
-        "category": category,
-        "posts": posts
-    }
-    return render(request, "blog_category.html", context)
+def parts_by_single_supplier(request):
+    parts = Part.objects.get(supplier__iexact="InvenSense")
+    context = {'parts':parts}
+    return render(request, 'parts_by_single_supplier.html', context)
+
+def parts_ordered_by_supplier(request):
+    parts = Part.objects.order_by('headline')[0]
+    context = {'parts':parts}
+    return render(request, 'parts_ordered_by_supplier.html', context)
+
+def last_ten_parts(request):
+    last_ten = Part.objects.filter(since=since).order_by('-id')[:10]
+    context = reversed(last_ten)
+    return render(request, 'last_ten_parts.html', context)
 

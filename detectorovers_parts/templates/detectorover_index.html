@@ -28,36 +28,11 @@
         <!-- an image is placed here -->
         <div>
         <img src="https://bn1304files.storage.live.com/y4mUL9l1xBMPf78zIJ1Rqv7aPounlXLvMAkar1x9Jd1hZCHazdxo0_Zfg0WaNclYF0ZgA2gM1_9R97tdw_DNC5c3kKqYtqSdpeETrWd0x-MavWFb1qqEx9vI-YcDjbGCd3zZlzOTN6STcn8HMYzeOWYsdgsjF9rI2fj8xG1uRXZ_8uDg_tVmPNiEsquQswGlqGs?width=660&height=321&cropmode=none" class="rounded mx-auto d-block" width="330" height="160" />
+        <!-- a spacer -->
         <div class="mx-auto"  style="height: 30px;">
         </div>
         </div>
         
-        <div>
-            <h2>Parts list table</h2>
-        </div>
-    
-        <!-- bootstrap table section -->
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">name</th>
-                <th scope="col">manufacturer</th>
-                <th scope="col">manufacturer_part_number</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for part in parts %}
-            <tr>
-                <td>{{ part.id }}</td>
-                <td>{{ part.name }}</td>
-                <td>{{ part.manufacturer }}</td>
-                <td>{{ part.manufacturer_part_number }}</td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
         <!-- literally white space on the html page -->
         <div class="mx-auto"  style="height: 200px;">
         </div>
@@ -72,32 +47,9 @@
             <h2>hello i am testing thingo!</h2>
         </div>
 
-        <!-- html table section -->
-        <div>
-        <h2>Parts list table</h2>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class=col-md-6>
-            <table>
-                <th>id</th>
-                <th>name</th>
-                <th>manufacturer</th>
-                <th>manufacturer_part_number</th>
-                {% for part in parts %}
-                <tr>
-                    <td>{{ part.id }}</td>
-                    <td>{{ part.name }}</td>
-                    <td>{{ part.manufacturer }}</td>
-                    <td>{{ part.manufacturer_part_number }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-            </div>
-        </div>
-
-
+        {% endblock %}
+        
     </body>
-    {% endblock %}
+    
 </html>
 

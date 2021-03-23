@@ -1,7 +1,48 @@
-{% extends "base.html" %}
-{% load static %}
-{% block page_content %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h1>This is detectorovers parts and sensor list page</h1>
+        <title>parts list</title>
+    </head>
 
-{% endblock %}
+    {% extends "base.html" %}
+    {% load static %}
+    {% block page_content %}
+
+    <h1>This is detectorovers parts and sensor list page</h1>
+
+    <!-- a spacer -->
+    <div class="mx-auto"  style="height: 50px;">
+    </div>
+
+    <div>
+        <h2>Parts list table</h2>
+    </div>
+
+    <!-- bootstrap table section -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">manufacturer</th>
+            <th scope="col">manufacturer_part_number</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for part in parts %}
+        <tr>
+            <td>{{ part.id }}</td>
+            <td>{{ part.name }}</td>
+            <td>{{ part.manufacturer }}</td>
+            <td>{{ part.manufacturer_part_number }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
+</html>

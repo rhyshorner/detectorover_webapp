@@ -8,18 +8,16 @@ def detectorover_index(request):
 
 def parts_and_sensor_list(request):
     parts = Part.objects.all()
-    context = {
-        'parts':parts
-    }
+    context = {'parts':parts}
     return render(request, 'parts_and_sensor_list.html', context)
 
-def parts_by_single_supplier(request):
-    parts = Part.objects.get(supplier__iexact="InvenSense")
+def parts_filter_by_invensense(request):
+    parts = Part.objects.filter(manufacturer__contains='InvenSense')
     context = {'parts':parts}
-    return render(request, 'parts_by_single_supplier.html', context)
+    return render(request, 'parts_filter_by_invensense.html', context)
 
 def parts_ordered_by_supplier(request):
-    parts = Part.objects.order_by('headline')[0]
+    parts = Part.objects.order_by('manufacturer')[0]
     context = {'parts':parts}
     return render(request, 'parts_ordered_by_supplier.html', context)
 

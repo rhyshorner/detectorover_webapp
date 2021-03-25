@@ -17,7 +17,7 @@ def parts_filter_by_invensense(request):
     return render(request, 'parts_filter_by_invensense.html', context)
 
 def parts_ordered_by_supplier(request):
-    parts = Part.objects.order_by('manufacturer')[0]
+    parts = Part.objects.order_by('supplier')
     context = {'parts':parts}
     return render(request, 'parts_ordered_by_supplier.html', context)
 

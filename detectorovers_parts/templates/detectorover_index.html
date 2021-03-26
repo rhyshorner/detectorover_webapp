@@ -3,7 +3,7 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
 
         <title>Detectorover</title>
     </head>
@@ -25,18 +25,91 @@
         </div>
         </div>
 
-        <!-- an image is placed here -->
-        <div>
-        <img src="https://bn1304files.storage.live.com/y4mUL9l1xBMPf78zIJ1Rqv7aPounlXLvMAkar1x9Jd1hZCHazdxo0_Zfg0WaNclYF0ZgA2gM1_9R97tdw_DNC5c3kKqYtqSdpeETrWd0x-MavWFb1qqEx9vI-YcDjbGCd3zZlzOTN6STcn8HMYzeOWYsdgsjF9rI2fj8xG1uRXZ_8uDg_tVmPNiEsquQswGlqGs?width=660&height=321&cropmode=none" class="rounded mx-auto d-block" width="330" height="160" />
-        <!-- a spacer -->
-        <div class="mx-auto"  style="height: 30px;">
+        <!-- literally white space on the html page -->
+        <div class="mx-auto"  style="height: 50px;">
         </div>
+
+        <div class="row justify-content-center">
+            <h2>bootstrap carosel with labels and buttons to slide</h2>
+        </div>
+
+        <!-- bootstrap carosel -->
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://bn1304files.storage.live.com/y4mUL9l1xBMPf78zIJ1Rqv7aPounlXLvMAkar1x9Jd1hZCHazdxo0_Zfg0WaNclYF0ZgA2gM1_9R97tdw_DNC5c3kKqYtqSdpeETrWd0x-MavWFb1qqEx9vI-YcDjbGCd3zZlzOTN6STcn8HMYzeOWYsdgsjF9rI2fj8xG1uRXZ_8uDg_tVmPNiEsquQswGlqGs?width=4032&height=1960&cropmode=none" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://bn1304files.storage.live.com/y4mq9v3GwQRtsNcDowulEPRicgI0D-vsCh6Fpz4fZh1KrvGpM5VRKGusOAiA2NUj39TvxsFgrpd_SeXNgQL3rGPkDXwiR58E1S_BGbh3TlmgD3XMpkPIm8GhFuAMYJLCCU3gRmzqayldQAoI_FwFXyBcqkJTj5x1EKQJG4DdLasgIDVUdJlDT0XvXOrIEJiJuj-?width=4032&height=1960&cropmode=none" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://bn1304files.storage.live.com/y4m7D-OcF6DdnRTd3a54RdWCC550Ct18aIXEoK34lnOuztU1jjwL0KnmO-XnU93vVTIwyUqij9BYEnWIkPYJj8u1hjtghKvL4YO29ms_mLrv95J1S1yX3H6uABhtWY9DW7ql5qN2wAVvj9QbjFFlCS4isQaVcdLFnTNEMrDAwsxapDIb4ll9vvdfwzTitGVzjOv?width=4032&height=1960&cropmode=none" class="d-block w-100" alt="" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- literally white space on the html page -->
+        <div class="mx-auto"  style="height: 50px;">
+        </div>
+
+        <div class="row justify-content-center">
+            <h2>bootstrap carosel auto slides with no labels or buttons</h2>
+        </div>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="https://bn1304files.storage.live.com/y4m7D-OcF6DdnRTd3a54RdWCC550Ct18aIXEoK34lnOuztU1jjwL0KnmO-XnU93vVTIwyUqij9BYEnWIkPYJj8u1hjtghKvL4YO29ms_mLrv95J1S1yX3H6uABhtWY9DW7ql5qN2wAVvj9QbjFFlCS4isQaVcdLFnTNEMrDAwsxapDIb4ll9vvdfwzTitGVzjOv?width=4032&height=1960&cropmode=none" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://bn1304files.storage.live.com/y4mq9v3GwQRtsNcDowulEPRicgI0D-vsCh6Fpz4fZh1KrvGpM5VRKGusOAiA2NUj39TvxsFgrpd_SeXNgQL3rGPkDXwiR58E1S_BGbh3TlmgD3XMpkPIm8GhFuAMYJLCCU3gRmzqayldQAoI_FwFXyBcqkJTj5x1EKQJG4DdLasgIDVUdJlDT0XvXOrIEJiJuj-?width=4032&height=1960&cropmode=none" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://bn1304files.storage.live.com/y4mUL9l1xBMPf78zIJ1Rqv7aPounlXLvMAkar1x9Jd1hZCHazdxo0_Zfg0WaNclYF0ZgA2gM1_9R97tdw_DNC5c3kKqYtqSdpeETrWd0x-MavWFb1qqEx9vI-YcDjbGCd3zZlzOTN6STcn8HMYzeOWYsdgsjF9rI2fj8xG1uRXZ_8uDg_tVmPNiEsquQswGlqGs?width=4032&height=1960&cropmode=none" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+        <!-- literally white space on the html page -->
+        <div class="mx-auto"  style="height: 50px;">
+        </div>
+
+        <div>
+            <h1>Your Code Embed</h1>
+            <script src="https://gist.github.com/rhyshorner/8468cd1505003583360b407e305c40e4.js"></script>
         </div>
         
         <!-- literally white space on the html page -->
-        <div class="mx-auto"  style="height: 200px;">
+        <div class="mx-auto"  style="height: 50px;">
         </div>
-          
+
         <!-- bootstrap gap -->
         <div class="d-grid gap-0">
             <div class="p-3 bg-light border">testing and prototypes below this</div>

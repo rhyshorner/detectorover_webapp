@@ -1,0 +1,1 @@
+gunicorn detectorover_webapp.wsgi --log-file -

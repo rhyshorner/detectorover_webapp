@@ -16,13 +16,24 @@
                     <a class="dropdown-item" href="{% url 'parts_and_sensor_list' %}">Full parts list</a>
                     <a class="dropdown-item" href="{% url 'parts_filter_by_invensense' %}">Filtered by supplier "InsenSense"</a>
                     <a class="dropdown-item" href="{% url 'parts_ordered_by_supplier' %}">parts_ordered_by_supplier</a>
+                    <a class="dropdown-item" href="{% url 'last_ten_parts' %}">last ten recorded parts</a>
                 <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
                 </li>
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Place holder</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">About</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">About Detectorover</a>
+                    <a class="dropdown-item" href="#">About me</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Code</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Source code</a>
+                    <a class="dropdown-item" href="#">modules/packages</a>
                 </li>
             </ul>
         </div>

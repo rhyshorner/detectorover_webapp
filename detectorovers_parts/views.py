@@ -22,7 +22,7 @@ def parts_ordered_by_supplier(request):
     return render(request, 'parts_ordered_by_supplier.html', context)
 
 def last_ten_parts(request):
-    last_ten = Part.objects.filter(since=since).order_by('-id')[:10]
-    context = reversed(last_ten)
+    parts = Part.objects.order_by('-id')[:10]
+    context = {'parts':parts}
     return render(request, 'last_ten_parts.html', context)
 

@@ -21,13 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'y#*!fq9w29eu9e-mwy+qhflmr^718elx!uitqbzt&*!sao*)@l'
-
+SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['detectoroverwebapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','detectoroverwebapp.herokuapp.com']
 
 # Application definition
 
@@ -137,6 +136,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+#import dj_database_url 
+#prod_db  =  dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(prod_db)
+
+django_heroku.settings(locals())

@@ -7,9 +7,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-inverse">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'detectorover_index' %}">Detectorover's webapp</a>
+        <a class="navbar-brand" href="#">Weather app</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,35 +20,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Parts and Sensors</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{% url 'parts_and_sensor_list' %}">Full parts list</a>
-                    <a class="dropdown-item" href="{% url 'parts_filter_by_invensense' %}">Filtered by supplier "InsenSense"</a>
-                    <a class="dropdown-item" href="{% url 'parts_ordered_by_supplier' %}">parts_ordered_by_supplier</a>
-                    <a class="dropdown-item" href="{% url 'last_ten_parts' %}">last ten recorded parts</a>
-                <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">placeholder</a>
                 </div>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'weather_page' %}">Weatherpage</a>
-                    </div>
-                </li>
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">About</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">About Detectorover</a>
-                    <a class="dropdown-item" href="#">About me</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Code</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Source code</a>
-                    <a class="dropdown-item" href="#">modules/packages</a>
+                <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
                 </li>
             </ul>
         </div>

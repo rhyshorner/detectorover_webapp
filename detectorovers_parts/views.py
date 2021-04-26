@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from detectorovers_parts.models import Part
+import requests as req
+import os
 
 # Create your views here.
 
@@ -26,3 +28,15 @@ def last_ten_parts(request):
     context = {'parts':parts}
     return render(request, 'last_ten_parts.html', context)
 
+def weather_page(request):
+    owmapi_key =  os.environ['OWM_KEY']
+    base_url = 'https://api.openweathermap.org/data/2.5/weather'
+    parameters = {
+        'q': 'Sydney,AU',
+        'appid': owmapi_key,
+        'units':'metric'
+    }
+    resp = req.get(base_url, params=parameters)
+    resp = resp.json()
+    context = {'resp':resp}
+    return render(request, 'weather_page.html', context)

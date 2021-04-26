@@ -7,4 +7,5 @@ urlpatterns = [
     path("parts_filter_by_invensense/", views.parts_filter_by_invensense, name="parts_filter_by_invensense"),
     path("parts_ordered_by_supplier/", views.parts_ordered_by_supplier, name="parts_ordered_by_supplier"),
     path("last_ten_parts/", views.last_ten_parts, name="last_ten_parts"),
+    path("weather_page/", views.weather_page, name="weather_page"),
 ]

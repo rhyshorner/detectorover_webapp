@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from detectorovers_parts.models import Part
 import requests as req
 import os
@@ -38,5 +39,17 @@ def weather_page(request):
     }
     resp = req.get(base_url, params=parameters)
     resp = resp.json()
+    print(f'{resp}')
     context = {'resp':resp}
     return render(request, 'weather_page.html', context)
+
+def weather_api(request):
+    owmapi_key =  os.environ['OWM_KEY']
+    base_url = 'https://api.openweathermap.org/data/2.5/weather'
+    parameters = {
+        'q': 'Sydney,AU',
+        'appid': owmapi_key,
+        'units':'metric'
+    }
+    resp = req.get(base_url, params=parameters).json()
+    return HttpResponse(resp)

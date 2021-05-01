@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('detectorovers_parts.urls')),
     path("detectorovers_parts/", include("detectorovers_parts.urls")),
+    path("weather_app/", include("weather_app.urls")),
 ]

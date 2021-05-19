@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'detectorovers_parts',
     'weather_app',
+    'portfolio',
 ]
 
 MIDDLEWARE = [

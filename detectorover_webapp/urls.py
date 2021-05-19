@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('detectorovers_parts.urls')),
     path("detectorovers_parts/", include("detectorovers_parts.urls")),
     path("weather_app/", include("weather_app.urls")),
+    path("portfolio/", include("portfolio.urls")),
 ]
